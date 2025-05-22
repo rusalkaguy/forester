@@ -85,7 +85,7 @@ our @EXPORT = qw( executeConsense
 
 # Software directory:
 # ---------------------
-our $SOFTWARE_DIR              = "/Users/czmasek/SOFT/";
+our $SOFTWARE_DIR              = "/Users/curtish/Documents/bv-abrc/H5N1_segment_trees/SOFT";
 
 # Java virtual machine:
 # ---------------------
@@ -97,38 +97,37 @@ our $TEMP_DIR_DEFAULT          = "/tmp/";
 
 # Programs from Joe Felsenstein's PHYLIP package:
 # -----------------------------------------------
-our $SEQBOOT                   = $SOFTWARE_DIR."phylip-3.697/src/seqboot";
-our $NEIGHBOR                  = $SOFTWARE_DIR."phylip-3.697/src/neighbor";
-our $PROTPARS                  = $SOFTWARE_DIR."phylip-3.697/src/protpars";
-our $PROML                     = $SOFTWARE_DIR."phylip-3.697/src/proml";
-our $FITCH                     = $SOFTWARE_DIR."phylip-3.697/src/fitch";
-our $CONSENSE                  = $SOFTWARE_DIR."phylip-3.697/src/consense";
-our $PHYLIP_VERSION            = "3.697";
+our $PHYLIP_VERSION            = "3.697"; 
+our $SEQBOOT                   = $SOFTWARE_DIR."/phylip-".$PHYLIP_VERSION."/src/seqboot";
+our $NEIGHBOR                  = $SOFTWARE_DIR."/phylip-".$PHYLIP_VERSION."/src/neighbor";
+our $PROTPARS                  = $SOFTWARE_DIR."/phylip-".$PHYLIP_VERSION."/src/protpars";
+our $PROML                     = $SOFTWARE_DIR."/phylip-".$PHYLIP_VERSION."/src/proml";
+our $FITCH                     = $SOFTWARE_DIR."/phylip-".$PHYLIP_VERSION."/src/fitch";
+our $CONSENSE                  = $SOFTWARE_DIR."/phylip-".$PHYLIP_VERSION."/src/consense";
 
 # TREE-PUZZLE:
 # ------------
-our $PUZZLE                    = $SOFTWARE_DIR."tree-puzzle-5.3.rc16-macosx/src/puzzle";
 our $PUZZLE_VERSION            = "5.3.rc16";
+our $PUZZLE                    = $SOFTWARE_DIR."/tree-puzzle-".$PUZZLE_VERSION."-macosx/src/puzzle";
 
 # FASTME:
 # -----------------------------------------------------
-our $FASTME                    = $SOFTWARE_DIR."fastme-2.1.6.4/src/fastme";
 our $FASTME_VERSION            = "2.1.6.4";
+our $FASTME                    = $SOFTWARE_DIR."/fastme-".$FASTME_VERSION."/src/fastme";
 
 # RAXML:
 # -----------------------------------------------------
 our $RAXMLNG_VERSION           = "1.2.0";
-our $RAXMLNG                   = "/Users/czmasek//SOFT/RAXML/raxml-ng";
+our $RAXMLNG                   = $SOFTWARE_DIR."/RAXML/raxml-ng";
 
 # IQTREE:
 # -----------------------------------------------------
 our $IQTREE_VERSION           = "2.3.2";
-our $IQTREE                   = "/Users/czmasek/SOFT/iqtree-2.3.2-macOS-arm/bin/iqtree2";
-
+our $IQTREE                   = $SOFTWARE_DIR."/iqtree-".$IQTREE_VERSION."-macOS-arm/bin/iqtree2";
 
 # forester.jar.:
 # ----------------------------------------------------------------------------------------------------
-our $FORESTER_JAR              = "/Users/czmasek/IdeaProjects/forester/forester/java/forester.jar";
+our $FORESTER_JAR              = "/Users/curtish/Documents/bv-abrc/H5N1_segment_trees/forester/forester/java/forester.jar";
 
 
 # End of variables which need to be set by the user for using "phylo_pl.pl".

@@ -1,10 +1,10 @@
 VERSION="1.0.0"
-TAP="/usr/bin/ruby /Users/czmasek/IdeaProjects/forester/forester/ruby/evoruby/exe/tap.rb"
-MSA_PRO="/usr/bin/ruby /Users/czmasek/IdeaProjects/forester/forester/ruby/evoruby/exe/msa_pro.rb"
-DECORATOR="/usr/bin/ruby /Users/czmasek/IdeaProjects/forester/forester/ruby/evoruby/exe/phylogenies_decorator.rb"
-PHYLO_PL="perl /Users/czmasek/IdeaProjects/forester/forester/perl/phylo_pl.pl"
-MAFFT="/Users/czmasek/anaconda3/bin/mafft"
-MSA_RENAME="/Users/czmasek/Dropbox/PROG/PYTHON/PYCHARM_PROJECTS/TWO/msa_rename.py"
+TAP="/usr/bin/ruby $PWD/forester/forester/ruby/evoruby/exe/tap.rb"
+MSA_PRO="/usr/bin/ruby $PWD/forester/forester/ruby/evoruby/exe/msa_pro.rb"
+DECORATOR="/usr/bin/ruby $PWD/forester/forester/ruby/evoruby/exe/phylogenies_decorator.rb"
+PHYLO_PL="perl $PWD/forester/forester/perl/phylo_pl.pl"
+MAFFT="$(which mafft)"
+MSA_RENAME="./python/msa_rename.py"
 
 if [ "$#" -ne 5 ]; then
   echo "Usage: mktree.sh <mafft options> <msa_pro options> <phylopl options> <input suffix> <workdir>" >&2
@@ -72,7 +72,7 @@ for i in $workdir/*; do
 
         if [ ! -f $workdir/${name}_mafft.fasta ]; then
           echo "        Executing: python $MSA_RENAME $workdir/${name}_ni_mafft.fasta $workdir/${name}.nim $workdir/${name}_mafft.fasta:"
-          python $MSA_RENAME $workdir/${name}_ni_mafft.fasta $workdir/${name}.nim $workdir/${name}_mafft.fasta
+	  python $MSA_RENAME $workdir/${name}_ni_mafft.fasta $workdir/${name}.nim $workdir/${name}_mafft.fasta
           rc=$?
           if [[ $rc != 0 ]]; then
             exit $rc
